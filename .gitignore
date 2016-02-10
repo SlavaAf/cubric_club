@@ -2,3 +2,9 @@
 /db.sqlite3
 /concert/migrations
 .idea
+/media/node_modules
+/static/ckeditor
+/static/admin
+/static/.DS_Store
+*.pyc
+.DS_Store

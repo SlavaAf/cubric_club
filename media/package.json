@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^2.6.1",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-htmlhint": "^0.3.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-uglify": "^1.4.0",
+    "imagemin-pngquant": "^4.1.2",
+    "postcss": "^5.0.4",
+    "postcss-center": "^1.0.0",
+    "postcss-clearfix": "^0.2.0",
+    "postcss-color-short": "^0.2.0",
+    "postcss-discard-comments": "^1.2.1",
+    "postcss-focus": "^1.0.0",
+    "postcss-pxtorem": "^3.0.0",
+    "postcss-short": "^0.3.0",
+    "postcss-size": "^1.0.0",
+    "precss": "^0.3.0"
+  }
+}
