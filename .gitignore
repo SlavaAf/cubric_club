@@ -7,4 +7,5 @@
 /static/admin
 /static/.DS_Store
 *.pyc
+/media/uploads
 .DS_Store
