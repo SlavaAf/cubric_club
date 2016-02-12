@@ -1,48 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="col-md-12 event col-xs-12">
-        <div class="col-md-1 date">
+    <div class="col-md-12 event col-xs-12 col-sm-12">
+        <div class="col-md-1 date col-xs-12 col-sm-12">
             <p class="day col-xs-12">20</p>
             <p class="mout col-xs-12">июля</p>
             <p class="time col-xs-12">19:30</p>
         </div>
-        <div class="col-md-3 img_prew col-xs-12">
+        <div class="col-md-3 img_prew col-xs-12 col-sm-6">
             <img src="{{ MEDIA_URL }}images/sl.png">
         </div>
-        <div class="col-md-5 text_prew">
+        <div class="col-md-5 text_prew col-xs-12 col-sm-6">
             <a class="title col-xs-12">Jayline</a>
             <p class="preview col-xs-12">
                 После презентации альбома «Бесконечность», в феврале 2016 группа представит новое шоу «КОНЦЕРТ ПО ЗАЯВКАМ».
             </p>
         </div>
-        <div class="col-md-2 price col-xs-10">
+        <div class="col-md-2 price col-xs-10 col-sm-6">
             <p class="ticket">Вход: 800 pуб.</p>
             <p class="ticket_vip">VIP: 1800 pуб.</p>
         </div>
-        <div class="col-md-1 img_ticket col-xs-2">
+        <div class="col-md-1 img_ticket col-xs-2 col-sm-6">
             <img src="{{ MEDIA_URL }}images/ticket.png">
         </div>
     </div>
     {% for object in object_list %}
-        <div class="col-md-12 event col-xs-12" data-toggle="{{ object.event_type }}">
-            <div class="col-md-1 date">
+        <div class="col-md-12 event col-xs-12 col-sm-12" data-toggle="{{ object.event_type }}">
+            <div class="col-md-1 date col-xs-12 col-sm-12">
                 <p class="day col-xs-12">{{ object.datetime.day }}</p>
                 <p class="mout col-xs-12">{{ object.datetime.month }}</p>
                 <p class="time col-xs-12">{{ object.datetime.time }}</p>
             </div>
-            <div class="col-md-3 img_prew col-xs-12">
+            <div class="col-md-3 img_prew col-xs-12 col-sm-6">
                 <img src="{{ MEDIA_URL }}{{ object.preview_image }}">
             </div>
-            <div class="col-md-5 text_prew">
+            <div class="col-md-5 text_prew col-xs-12 col-sm-6">
                 <a class="title col-xs-12">{{ object.title }}</a>
                 <p class="preview col-xs-12">{{ object.preview_text }}</p>
             </div>
-            <div class="col-md-2 price col-xs-10">
+            <div class="col-md-2 price col-xs-10 col-sm-6">
                 <p class="ticket">Вход: {{ object.ticket_price }} pуб.</p>
                 <p class="ticket_vip">VIP: {{ object.ticket_vip_price }} pуб.</p>
             </div>
-            <div class="col-md-1 img_ticket col-xs-2">
+            <div class="col-md-1 img_ticket col-xs-2 col-sm-6">
                 <a href="{{ object.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
             </div>
         </div>
