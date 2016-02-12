@@ -24,6 +24,8 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^$', index_view, name='index'),
+    # ссылка вот
+    url(r'^contacts/$', contact_view, name='contact'),
     url(r'^admin/', admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
