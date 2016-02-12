@@ -17,7 +17,7 @@ class Post(models.Model):
     video_link = models.CharField(verbose_name="Ссылка на видео", max_length=200, default="", blank=True) # ссылка на видео
     ticket_link = models.CharField(verbose_name="Ссылка на билет", max_length=200, default="", blank=True) # ссылка на билет
 
-    datetime = models.DateTimeField('Дата') # дата начала концерта
+    datetime = models.DateTimeField('Дата', ) # дата начала концерта
     full_desc_ck = RichTextUploadingField(verbose_name="Полное описание со стилем", blank=True) # полное описание в ckeditor
     full_desc = models.TextField(verbose_name="Полное описание без стилей", default="", blank=True) # полное описание без ckeditor
 

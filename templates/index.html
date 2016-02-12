@@ -25,10 +25,11 @@
         </div>
     </div>
     {% for object in object_list %}
+        {% if object.actual %}
         <div class="col-md-12 event col-xs-12 col-sm-12" data-toggle="{{ object.event_type }}">
             <div class="col-md-1 date col-xs-12 col-sm-12">
                 <p class="day col-xs-12">{{ object.datetime.day }}</p>
-                <p class="mout col-xs-12">{{ object.datetime.month }}</p>
+                <p class="month col-xs-12">{{ object.datetime|date:"N" }}</p>
                 <p class="time col-xs-12">{{ object.datetime.time }}</p>
             </div>
             <div class="col-md-3 img_prew col-xs-12 col-sm-6">
@@ -46,5 +47,6 @@
                 <a href="{{ object.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
             </div>
         </div>
+        {% endif %}
     {% endfor %}
 {% endblock %}
