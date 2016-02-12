@@ -56,6 +56,12 @@ header{
         height: 30px;
         margin-right: auto;
         margin-left: auto;
+        a:hover{
+          i{
+            height: 35px;
+            background-color: #f05523;
+          }
+        }
         i{
           display: block;
           width: 30px;
@@ -95,6 +101,9 @@ header{
       a{
         color: #fff;
         cursor: pointer;
+      }
+      a:hover{
+        color: #f05523;
       }
       a:hover{
         text-decoration: none;
@@ -166,6 +175,12 @@ footer{
       height: 30px;
       margin-right: auto;
       margin-left: auto;
+      a:hover{
+        i{
+          height: 35px;
+          background-color: #f05523;
+        }
+      }
       i{
         display: block;
         width: 30px;
@@ -262,6 +277,8 @@ footer{
   .img_prew{
     padding-left: 0;
     padding-right: 0;
+    max-height: 150px;
+    overflow: hidden;
     img{
       display: block;
       width: 100%;
@@ -275,10 +292,16 @@ footer{
       cursor: pointer;
     }
     a:hover{
+      font-size: 58px;
+      color: #f05523;
+      /*padding-bottom: 5px;*/
+      border-bottom: 3px solid #f05523;
       text-decoration: none;
     }
     .preview{
       font-size: 24px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
   .price{
@@ -293,6 +316,11 @@ footer{
   .img_ticket{
     padding-right: 0;
     padding-top: 70px;
+    a:hover{
+      img{
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -304,6 +332,12 @@ footer{
     .top-nav{
       .pull-right{
         .social{
+          a:hover{
+            i{
+              height: 35px;
+              background-color: #f05523;
+            }
+          }
           .vk{
             background: url("../images/vk_i.png") center no-repeat;
           }
@@ -325,14 +359,21 @@ footer{
         a{
           color: black;
         }
+        a:hover{
+          color: #f05523;
+        }
       }
+    }
+    .trans{
+      background: url("../images/in_concert.png");
+      background-size: 100% 100%;
     }
   }
   .carousel-caption {
     .car_date{
-      background: none;
+      /*background: none;*/
       o{
-        color: #f05523;
+        /*color: #f05523;*/
       }
     }
     .car_name{
@@ -350,7 +391,7 @@ footer{
     }
   }
 }
-@media screen and (min-width: 768px){
+/*@media screen and (min-width: 768px){
   .invert{
     .carousel-caption {
         right: 20%;
@@ -365,14 +406,14 @@ footer{
           margin-bottom: 50px;
         }
         .car_name{
-          /*font-size: 92px;*/
+          font-size: 92px;
           width: 100%;
           float: none;;
           text-align: center;;
         }
     }
   }
-}
+}*/
 /*----------------------mobile------------------------*/
 @media (max-width: 767px){
   header{
@@ -387,9 +428,22 @@ footer{
     .black_nav{
       margin-top: 20px;
       height: 230px;
+      padding-top: 5px;
       /*height: 10vh;*/
       .menu{
         margin-bottom: 10px;
+        a{
+          border-left: 2px solid #f05523;
+          border-right: 2px solid #f05523;
+          padding-bottom: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+        }
+        a:hover{
+          background-color: #f05523;
+          color: inherit;
+        }
       }
       .logo{
         img{
@@ -412,7 +466,7 @@ footer{
     right: 20%;
     left: 10%;
     padding-bottom: 20px;
-    top: 40%;
+    top: 30%;
     .car_date{
       font-size: 38px;
         display: block;
@@ -436,7 +490,31 @@ footer{
     padding-bottom: 15px;
     .col-xs-12{
       text-align: center;
+      padding-left: 0;
+      padding-right: 0;
     }
+    .date{
+      margin-bottom: 10px;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      left: 0;
+      width: 90px;
+      border-bottom: 3px solid #f05523;
+      border-right: 3px solid #f05523;
+      padding-bottom: 5px;
+    }
+    .img_ticket{
+      padding-top: 65px;
+    }
+    .img_prew{
+      max-height: 400px;
+    }
+  }
+  .col-xs-12{
+    padding-left: 0;
+    padding-right: 0;
   }
   footer{
     height: 400px;
@@ -448,6 +526,95 @@ footer{
         margin-left: auto;
         margin-right: auto;
       }
+    }
+  }
+  .invert{
+    .event{
+      .date{
+        background-color: black;
+      }
+    }
+    header{
+      .black_nav{
+        .menu{
+          a:hover{
+            /*background-color: #f05523;*/
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+@media(min-width: 768px) and (max-width: 959px){
+  header{
+    /*margin-bottom: 210px;*/
+    .trans{
+      top: 125px;
+      height: 150px;
+      width: 151px;
+    }
+    .black_nav{
+      .logo{
+        img{
+          top: -78px;
+        }
+      }
+    }
+  }
+  .carousel-caption {
+    .car_date{
+      font-size: 38px;
+      o{
+        font-size: 50px;
+      }
+    }
+    .car_name{
+      font-size: 72px;
+    }
+  }
+  .event{
+    border-bottom: 3px solid #f05523;
+    padding-bottom: 10px;
+    .text_prew{
+      min-height: 200px;
+    }
+    .img_prew{
+      max-height: 200px;
+      /*overflow: hidden;*/
+    }
+    .price{
+      text-align: right;
+    }
+    .img_ticket{
+      padding-top: 67px;
+      padding-left: 85px;
+    }
+    .date{
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  footer{
+    height: 280px;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    .col-md-4{
+      img{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+@media(min-width: 960px) and (max-width: 1200px){
+  header{
+    /*margin-bottom: 210px;*/
+    .trans{
+      top: 125px;
+      height: 150px;
+      width: 151px;
     }
   }
 }
