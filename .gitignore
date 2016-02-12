@@ -3,6 +3,9 @@
 /concert/migrations
 .idea
 /media/node_modules
+/media/*.png
+/media/*.jpg
+/media/*.jpeg
 /static/ckeditor
 /static/admin
 /static/.DS_Store

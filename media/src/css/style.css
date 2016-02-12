@@ -1,6 +1,376 @@
-body{
-    background: black;
-    p{
-        color: red;
-    }
+
+@font-face {
+    font-family: "lintel-5";
+    src: url("../fonts/Lintel/LintelMedium.ttf");
+    font-weight: normal;
 }
+@font-face {
+    font-family: "lintel-6";
+    src: url("../fonts/Lintel/LintelBold.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "lintel-7";
+    src: url("../fonts/Lintel/Lintel ExtraBold.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "intro";
+    src: url("../fonts/intro.otf");
+    font-weight: normal;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: Lintel;
+  margin-bottom: 170px;
+}
+@media (min-width: 960px){
+  .container{
+    width: 960px;
+  }
+}
+/*----------------------header-----------------------*/
+header{
+  margin-bottom: 100px;
+  .top-nav{
+    height: 90px;
+    padding-top: 20px;
+    .pull-left{
+      span{
+        font-size: 28px;
+        text-align: center;
+        /*font-family: "lintel-5";*/
+        display: block;
+        b{
+          font-weight: bolder;
+        }
+      }
+    }
+    .pull-right{
+      padding-top: 5px;
+      .social{
+        width: 120px;
+        height: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        i{
+          display: block;
+          width: 30px;
+          float: left;
+          height: 30px;
+          text-align: center;
+        }
+        .vk{
+          background: url("../images/vk.png") center no-repeat;
+          /*background-size: 100% 100%;*/
+        }
+        .fb{
+          background: url("../images/fb.png") center no-repeat;
+          /*background-size: 100% 100%;*/
+        }
+        .twit{
+          background: url("../images/twit.png") center no-repeat;
+          /*background-size: 100% 100%;*/
+        }
+        .inst{
+          background: url("../images/inst.png") center no-repeat;
+          /*background-size: 100% 100%;*/
+        }
+      }
+    }
+  }
+  .black_nav{
+    height: 35px;
+    background-color: black;
+    padding-top: 7px;
+    .menu{
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      a{
+        color: #fff;
+        cursor: pointer;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+    }
+    .logo{
+      padding-left: 0;
+      padding-right: 0;
+      img{
+        display: block;
+        width: 100%;
+        position: relative;
+        top: -103px;
+      }
+    }
+  }
+  .w_nav{
+    background-color: #fff;
+    .menu{
+      a{
+        color: black;
+      }
+    }
+  }
+  .trans{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../images/in_party.png");
+    background-size: 100% 100%;
+    height: 200px;
+    width: 201px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+/*----------------------footer-----------------------*/
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  background-color: black;
+  /*background: url("");*/
+  .orange{
+    height: 3px;
+    background-color: #f05523;
+  }
+  .col-md-4{
+    text-align: center;
+    img{
+      display: block;
+      width: 100%;
+    }
+    span{
+      display: block;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.44);
+      font-size: 26px;
+      font-family: lintel;
+    }
+    span:first-child{
+      margin-top: 40px;
+    }
+    .social{
+      margin-top: 60px;
+      width: 120px;
+      height: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      i{
+        display: block;
+        width: 30px;
+        float: left;
+        height: 30px;
+        text-align: center;
+      }
+      .vk{
+        background: url("../images/vk_i.png") center no-repeat;
+        /*background-size: 100% 100%;*/
+      }
+      .fb{
+        background: url("../images/fb_i.png") center no-repeat;
+        /*background-size: 100% 100%;*/
+      }
+      .twit{
+        background: url("../images/twit_i.png") center no-repeat;
+        /*background-size: 100% 100%;*/
+      }
+      .inst{
+        background: url("../images/inst_i.png") center no-repeat;
+        /*background-size: 100% 100%;*/
+      }
+    }
+  }
+}
+/*----------------------content-----------------------*/
+@media screen and (min-width: 768px){
+  .carousel-caption {
+      right: 20%;
+      left: 20%;
+      padding-bottom: 30px;
+      top: 50%;
+      .car_date{
+        display: block;
+        width: 52%;
+        float: right;
+      }
+      .car_name{
+        /*font-size: 92px;*/
+        width: 100%;
+        float: right;
+        text-align: right;
+      }
+  }
+}
+.carousel-caption {
+  font-family: 'intro';
+  .car_date{
+    font-size: 68px;
+    background: black;
+    o{
+      font-size: 80px;
+      color: #f05523;
+    }
+  }
+  .car_name{
+    font-size: 102px;
+    /*width: 100%;
+    float: right;
+    text-align: right;*/
+  }
+}
+.carousel{
+  margin-bottom: 35px;
+}
+.event{
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 25px;
+  .date{
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 0;
+    p{
+      margin-bottom: 0;
+      line-height: 1;
+    }
+    .day{
+      /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+      font-size: 58px;
+      font-weight: bolder;
+    }
+    .mout{
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    .time{
+      color: #f05523;
+      font-size: 34px;
+      font-weight: bolder;
+    }
+  }
+  .img_prew{
+    padding-left: 0;
+    padding-right: 0;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .text_prew{
+    .title{
+      font-size: 58px;
+      font-weight: bolder;
+      color: black;
+      cursor: pointer;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+    .preview{
+      font-size: 24px;
+    }
+  }
+  .price{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 60px;
+    padding-right: 0;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .img_ticket{
+    padding-right: 0;
+    padding-top: 70px;
+  }
+}
+
+/*----------------------invert-----------------------*/
+.invert{
+  background-color: black;
+  color: #fff;
+  header{
+    .top-nav{
+      .pull-right{
+        .social{
+          .vk{
+            background: url("../images/vk_i.png") center no-repeat;
+          }
+          .fb{
+            background: url("../images/fb_i.png") center no-repeat;
+          }
+          .twit{
+            background: url("../images/twit_i.png") center no-repeat;
+          }
+          .inst{
+            background: url("../images/inst_i.png") center no-repeat;
+          }
+        }
+      }
+    }
+    .black_nav{
+      background-color: #fff;
+      .menu{
+        a{
+          color: black;
+        }
+      }
+    }
+  }
+  .carousel-caption {
+    .car_date{
+      background: none;
+      o{
+        color: #f05523;
+      }
+    }
+    .car_name{
+      /*font-size: 102px;*/
+      /*width: 100%;
+      float: right;
+      text-align: right;*/
+    }
+  }
+  .event{
+    .text_prew{
+      .title{
+        color: #fff;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px){
+  .invert{
+    .carousel-caption {
+        right: 20%;
+        left: 20%;
+        padding-bottom: 30px;
+        top: 10%;
+        .car_date{
+          display: block;
+          width: 100%;
+          float: none;;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        .car_name{
+          /*font-size: 92px;*/
+          width: 100%;
+          float: none;;
+          text-align: center;;
+        }
+    }
+  }
+}
+/*----------------------mobile------------------------*/
