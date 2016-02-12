@@ -15,9 +15,9 @@ def index_view(request):
                       'ticket_price': obj.ticket_price, 'ticket_vip_price': obj.ticket_vip_price,
                       'ticket_link': obj.ticket_link,
                       'actual': True if datetime.datetime(obj.datetime.year, obj.datetime.month,
-                                                          obj.datetime.day) > datetime.datetime.now() else False}
+                                                          obj.datetime.day, obj.datetime.hour,
+                                                          obj.datetime.minute) > datetime.datetime.now() else False}
         result_list.append(result_obj)
-
     return render(request, 'index.html', {'object_list': result_list, 'now': datetime.datetime.now()})
 
 
