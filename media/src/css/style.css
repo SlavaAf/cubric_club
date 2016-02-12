@@ -374,3 +374,80 @@ footer{
   }
 }
 /*----------------------mobile------------------------*/
+@media (max-width: 767px){
+  header{
+    margin-bottom: 210px;
+    .trans{
+      /*position: static;*/
+      top: 340px;
+    }
+    .top_nav{
+      height: 110px;
+    }
+    .black_nav{
+      margin-top: 20px;
+      height: 230px;
+      /*height: 10vh;*/
+      .menu{
+        margin-bottom: 10px;
+      }
+      .logo{
+        img{
+          top: 0px;
+          /*position: absolute;*/
+          /*bottom: 0;*/
+          width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .carousel-caption {
+    /*font-family: 'intro';*/
+    right: 20%;
+    left: 10%;
+    padding-bottom: 20px;
+    top: 40%;
+    .car_date{
+      font-size: 38px;
+        display: block;
+        width: 80%;
+        float: right;
+      /*background: black;*/
+      o{
+        font-size: 50px;
+        /*color: #f05523;*/
+      }
+    }
+    .car_name{
+      font-size: 72px;
+      width: 100%;
+      float: right;
+      text-align: right;
+    }
+  }
+  .event{
+    border-bottom: 3px solid #f05523;
+    padding-bottom: 15px;
+    .col-xs-12{
+      text-align: center;
+    }
+  }
+  footer{
+    height: 400px;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    .col-md-4{
+      img{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
