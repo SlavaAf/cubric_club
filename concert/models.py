@@ -1,6 +1,5 @@
 # coding: utf-8
 from django.db import models
-from django.contrib import admin
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
@@ -28,6 +27,7 @@ class Post(models.Model):
     def get_absolute_url(self):
         return "/blog/%i/" % self.id
 
+    class Meta:
+        verbose_name = "Событие"
+        verbose_name_plural = "События"
 
-
-admin.site.register(Post)
