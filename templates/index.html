@@ -25,7 +25,6 @@
         </div>
     </div>
     {% for object in object_list %}
-        {% if object.actual %}
         <div class="col-md-12 event col-xs-12 col-sm-12" data-toggle="{{ object.event_type }}">
             <div class="col-md-1 date col-xs-12 col-sm-12">
                 <p class="day col-xs-12">{{ object.datetime.day }}</p>
@@ -47,6 +46,5 @@
                 <a href="{{ object.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
             </div>
         </div>
-        {% endif %}
     {% endfor %}
 {% endblock %}
