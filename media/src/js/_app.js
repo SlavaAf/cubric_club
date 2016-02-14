@@ -9,23 +9,14 @@ $(document).ready(function(){
             setParty();
         else
             setConcert();
-        //alert('yo');
-        //console.log(this.attributes[2].nodeValue);
-        //$("body").css(
-        //    {'background-color':'black', 'color':'#fff'},
-        //)
-        //$(".black_nav").addClass('w_nav');
     });
 });
-function invert(){
-    console.log('wewe');
-};
 function setParty(){
     sessionStorage.setItem('style', 'party');
-    console.log(sessionStorage.getItem('style'));
+    //console.log(sessionStorage.getItem('style'));
     $('#trans').attr('name','party');
-    $("#logo").attr('src','media/images/logo_i.png');
-    $(".ticket").attr('src','media/images/ticket_i.png');
+    $("#logo").attr('src','/media/images/logo_i.png');
+    $(".ticket").attr('src','/media/images/ticket_i.png');
     $('#irl').text('Вечеринки');
     $("body").addClass('invert');
     $('[data-toggle=1]').css('display','none');
@@ -33,10 +24,10 @@ function setParty(){
 };
 function setConcert(){
     sessionStorage.setItem('style', 'concert');
-    console.log(sessionStorage.getItem('style'));
+    //console.log(sessionStorage.getItem('style'));
     $('#trans').attr('name','concert');
-    $("#logo").attr('src','media/images/logo.png');
-    $(".ticket").attr('src','media/images/ticket.png');
+    $("#logo").attr('src','/media/images/logo.png');
+    $(".ticket").attr('src','/media/images/ticket.png');
     $('#irl').text('Концерты');
     $("body").removeClass('invert');
     $('[data-toggle=1]').css('display','block');
