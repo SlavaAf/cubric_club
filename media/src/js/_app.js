@@ -1,25 +1,14 @@
 $(document).ready(function(){
     $('[data-toggle=2]').css('display','none');
+    if(sessionStorage.getItem('style') == "party")
+        setParty();
+    else
+        setConcert();
     $('#trans').click(function(){
-        if (this.attributes[2].nodeValue=="concert"){
-            console.log(this.attributes[2].nodeValue);
-            $(this).attr('name','party');
-            $("#logo").attr('src','media/images/logo_i.png');
-            $(".ticket").attr('src','media/images/ticket_i.png');
-            $('#irl').text('Вечеринки');
-            $("body").addClass('invert');
-            $('[data-toggle=1]').css('display','none');
-            $('[data-toggle=2]').css('display','block');
-        }else{
-            console.log(this.attributes[2].nodeValue);
-            $(this).attr('name','concert');
-            $("#logo").attr('src','media/images/logo.png');
-            $(".ticket").attr('src','media/images/ticket.png');
-            $('#irl').text('Концерты');
-            $("body").removeClass('invert');
-            $('[data-toggle=1]').css('display','block');
-            $('[data-toggle=2]').css('display','none');
-        }
+        if (this.attributes[2].nodeValue=="concert")
+            setParty();
+        else
+            setConcert();
         //alert('yo');
         //console.log(this.attributes[2].nodeValue);
         //$("body").css(
@@ -30,4 +19,26 @@ $(document).ready(function(){
 });
 function invert(){
     console.log('wewe');
+};
+function setParty(){
+    sessionStorage.setItem('style', 'party');
+    console.log(sessionStorage.getItem('style'));
+    $('#trans').attr('name','party');
+    $("#logo").attr('src','media/images/logo_i.png');
+    $(".ticket").attr('src','media/images/ticket_i.png');
+    $('#irl').text('Вечеринки');
+    $("body").addClass('invert');
+    $('[data-toggle=1]').css('display','none');
+    $('[data-toggle=2]').css('display','block');
+};
+function setConcert(){
+    sessionStorage.setItem('style', 'concert');
+    console.log(sessionStorage.getItem('style'));
+    $('#trans').attr('name','concert');
+    $("#logo").attr('src','media/images/logo.png');
+    $(".ticket").attr('src','media/images/ticket.png');
+    $('#irl').text('Концерты');
+    $("body").removeClass('invert');
+    $('[data-toggle=1]').css('display','block');
+    $('[data-toggle=2]').css('display','none');
 };
