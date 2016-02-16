@@ -39,10 +39,10 @@
         <div class="col-md-12 black_nav">
             <div class="container">
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a>О клубе</a>
+                    <a href="{% url 'about' %}">О клубе</a>
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a id="irl" href="/">Концерты</a>
+                    <a id="irl" href="{% url 'index' %}">Концерты</a>
                 </div>
                 <div class="logo col-md-4 col-xs-12 col-sm-4">
                     <img id="logo" src="{{ MEDIA_URL }}images/logo.png">
@@ -51,7 +51,7 @@
                     <a>Билеты</a>
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a href="/contacts/">Контакты</a>
+                    <a href="{% url 'contact' %}">Контакты</a>
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
             </div>
             <div class="col-md-4 col-xs-12 col-sm-6">
                 <span>Санкт-Петербург</span>
-                <span>Конюшенная пл., 2, м.Гостиный двор</span>
+                <span>Конюшенная пл.,2, м.Невский проспект</span>
                 <span>пт-вс 19:00-23:00</span>
                 <span><b>+7 921 905 65 88</b></span>
             </div>

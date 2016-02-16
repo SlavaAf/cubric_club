@@ -27,3 +27,8 @@ def index_view(request):
 def contact_view(request):
     object_list = Post.objects.all()
     return render(request, 'contact.html', {'object_list': object_list})
+
+
+def about_view(request):
+    object_list = Post.objects.all()
+    return render(request, 'about.html', {'object_list': object_list})
