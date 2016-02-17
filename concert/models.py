@@ -1,4 +1,5 @@
 # coding: utf-8
+import re
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -26,6 +27,18 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return "/blog/%i/" % self.id
+
+    def save(self, *args, **kwargs):
+        t = self.video_link
+        if self.video_link.find("embed") < 0:
+            re_str = r"((?<=(v|V)\/)|(?<=be\/)|(?<=(\?|\&)v=)|(?<=embed))([\w-]+)"
+            k = re.findall(re_str, self.video_link)
+            if len(k) > 0:
+                for key in k[0]:
+                    if len(key) == 11:
+                        t = "http://youtube.com/embed/" + key
+        self.video_link = t
+        super(Post, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Событие"
