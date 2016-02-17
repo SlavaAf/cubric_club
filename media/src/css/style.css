@@ -112,6 +112,9 @@ header{
       a:hover{
         text-decoration: none;
       }
+      .active{
+        color: #f05523;
+      }
     }
     .logo{
       padding-left: 0;
@@ -398,6 +401,9 @@ footer{
           color: black;
         }
         a:hover{
+          color: #f05523;
+        }
+        .active{
           color: #f05523;
         }
       }
