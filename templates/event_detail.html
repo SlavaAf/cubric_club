@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-md-12 col-xs-12 col-sm-12 event_detail">
+        <h3>{{ event.title }}</h3>
+        <div class="col-md-8 col-xs-12 col-sm-12 image">
+            <img src="{{ MEDIA_URL }}{{ event.preview_image }}">
+        </div>
+
+{#        <div class="col-md-12">#}
+{#            <div class="embed-responsive embed-responsive-16by9">#}
+{#                <iframe class="embed-responsive-item" src="{{ event.video_link }}" allowfullscreen></iframe>#}
+{#                <iframe width="560" height="315" src="https://www.youtube.com/embed/DZTRbLKFNo8" frameborder="0" allowfullscreen></iframe>#}
+{#            </div>#}
+{#        </div>#}
+    </div>
+{% endblock %}

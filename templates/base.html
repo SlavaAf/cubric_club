@@ -30,21 +30,19 @@
             <div class="col-md-4 pull-right col-xs-12 col-sm-4">
                 <div class="social">
                     <a href="https://vk.com/kubriklub" target="_blank"><i class="vk"></i></a>
-                    <a href="#" target="_blank"><i class="fb"></i></a>
-                    <a href="#" target="_blank"><i class="twit"></i></a>
-                    <a href="#" target="_blank"><i class="inst"></i></a>
+                    <a href="https://www.facebook.com/kubriklub" target="_blank"><i class="fb"></i></a>
+{#                    <a href="#" target="_blank"><i class="twit"></i></a>#}
+                    <a href="https://www.instagram.com/kubrik_club/" target="_blank"><i class="inst"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-md-12 black_nav">
             <div class="container">
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a href="/about/">О клубе</a>
-{#                    <a href="{% url 'about' %}">О клубе</a>#}
+                    <a href="{% url 'about' %}">О клубе</a>
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a id="irl" href="/">Концерты</a>
-{#                    <a id="irl" href="{% url 'index' %}">Концерты</a>#}
+                    <a id="irl" href="{% url 'index' %}">Концерты</a>
                 </div>
                 <div class="logo col-md-4 col-xs-12 col-sm-4">
                     <img id="logo" src="{{ MEDIA_URL }}images/logo.png">
@@ -53,8 +51,7 @@
                     <a>Билеты</a>
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a href="/contacts/">Контакты</a>
-{#                    <a href="{% url 'contact' %}">Контакты</a>#}
+                    <a href="{% url 'contact' %}">Контакты</a>
                 </div>
             </div>
         </div>
@@ -70,29 +67,29 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-{#                {% for object in object_list %}#}
-{#                    <div class="item" data-toggle="{{ object.event_type }}">#}
-{#                        <img src="{{ MEDIA_URL }}{{ object.preview_image }}" alt="{{ object.title }}">#}
-{#                        <div class="carousel-caption">#}
-{#                            <span class="car_date"><o>{{ object.datetime.day }}</o> {{ object.datetime.month }}</span>#}
-{#                            <p class="car_name">{{ object.title }}</p>#}
-{#                        </div>#}
+                {% for item in item_list %}
+                    <div class="item">
+                        <img src="{{ MEDIA_URL }}{{ item.preview_image }}" alt="{{ item.title }}">
+                        <div class="carousel-caption">
+                            <span class="car_date"><o>{{ item.datetime.day }}</o> {{ item.datetime|date:"E" }}</span>
+                            <p class="car_name">{{ item.title }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+{#                <div class="item active">#}
+{#                    <img src="{{ MEDIA_URL }}images/sl.png" alt="sl1">#}
+{#                    <div class="carousel-caption">#}
+{#                        <p class="car_date"><o>13</o> февpаля</p>#}
+{#                        <p class="car_name">Jayline</p>#}
 {#                    </div>#}
-{#                {% endfor %}#}
-                <div class="item active">
-                    <img src="{{ MEDIA_URL }}images/sl.png" alt="sl1">
-                    <div class="carousel-caption">
-                        <p class="car_date"><o>13</o> февpаля</p>
-                        <p class="car_name">Jayline</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="{{ MEDIA_URL }}images/sl.png" alt="sl2">
-                    <div class="carousel-caption">
-                        <p class="car_date"><o>13</o> февpаля</p>
-                        <p class="car_name">Jayline</p>
-                    </div>
-                </div>
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{{ MEDIA_URL }}images/sl.png" alt="sl2">#}
+{#                    <div class="carousel-caption">#}
+{#                        <p class="car_date"><o>13</o> февpаля</p>#}
+{#                        <p class="car_name">Jayline</p>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
 
             <!-- Controls -->
@@ -124,9 +121,9 @@
             <div class="col-md-4 col-xs-12 col-sm-12">
                 <div class="social">
                     <a href="https://vk.com/kubriklub" target="_blank"><i class="vk"></i></a>
-                    <a href="#" target="_blank"><i class="fb"></i></a>
-                    <a href="#" target="_blank"><i class="twit"></i></a>
-                    <a href="#" target="_blank"><i class="inst"></i></a>
+                    <a href="https://www.facebook.com/kubriklub" target="_blank"><i class="fb"></i></a>
+{#                    <a href="#" target="_blank"><i class="twit"></i></a>#}
+                    <a href="https://www.instagram.com/kubrik_club/" target="_blank"><i class="inst"></i></a>
                 </div>
             </div>
         </div>

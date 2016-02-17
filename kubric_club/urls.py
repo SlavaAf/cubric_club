@@ -24,8 +24,10 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^$', index_view, name='index'),
+    # url(r'^$', car_view, name='car'),
     url(r'^contacts/$', contact_view, name='contact'),
     url(r'^about/$', about_view, name='about'),
+    url(r'^event/(?P<pk>[-_\w]+)/$', detail_view, name='event_view'),
     url(r'^admin/', admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -10,6 +10,8 @@ $(document).ready(function(){
         else
             setConcert();
     });
+    //$('.item')[0].addClass('active');
+    $('.item').eq(0).addClass("active");
 });
 function setParty(){
     sessionStorage.setItem('style', 'party');
