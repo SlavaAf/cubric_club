@@ -362,6 +362,7 @@ footer{
     margin-bottom: 15px;
     background: url("../images/raider.png") no-repeat 15px top;
     height: 55px;
+    cursor: pointer;
   }
 }
 .event_detail{

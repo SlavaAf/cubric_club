@@ -39,7 +39,27 @@ def contact_view(request):
                           }
 
             result_list.append(result_obj)
-    return render(request, 'contact.html', {'object_list': result_list})
+    item_list = Contacts.objects.all()
+    return render(request, 'contact.html', {'object_list': result_list, 'item_list': item_list})
+
+
+def partner_view(request):
+    object_list = Post.objects.all()
+    result_list = []
+    for obj in object_list:
+        actual = True if datetime.datetime(obj.datetime.year, obj.datetime.month,
+                                           obj.datetime.day, obj.datetime.hour,
+                                           obj.datetime.minute) > datetime.datetime.now() else False
+        if actual:
+            result_obj = {'event_type': obj.event_type, 'datetime': obj.datetime,
+                          'preview_image': obj.preview_image, 'title': obj.title, 'preview_text': obj.preview_text,
+                          'ticket_price': obj.ticket_price, 'ticket_vip_price': obj.ticket_vip_price,
+                          'ticket_link': obj.ticket_link, 'pk': obj.pk,
+                          }
+
+            result_list.append(result_obj)
+    item_list = Partners.objects.all()
+    return render(request, 'partners.html', {'object_list': result_list, 'item_list': item_list})
 
 
 def about_view(request):

@@ -52,9 +52,9 @@
                     <img id="logo" src="{{ MEDIA_URL }}images/logo.png">
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-                    <a>Партнеры</a>
-{#                    {% url 'index' as url_index %}#}
-{#                    {% include 'includes/_menu_link.html' with url=url_index title='Билеты'  %}#}
+{#                    <a>Партнеры</a>#}
+                    {% url 'partner' as url_index %}
+                    {% include 'includes/_menu_link.html' with url=url_index title='Партнеры'  %}
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
 {#                    <a href="{% url 'contact' %}">Контакты</a>#}

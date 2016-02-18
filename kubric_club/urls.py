@@ -25,6 +25,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^$', index_view, name='index'),
     url(r'^contacts/$', contact_view, name='contact'),
+    url(r'^partners/$', partner_view, name='partner'),
     url(r'^about/$', about_view, name='about'),
     url(r'^event/(?P<pk>[-_\w]+)/$', detail_view, name='event_view'),
     url(r'^admin/', admin.site.urls),
