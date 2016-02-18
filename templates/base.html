@@ -31,7 +31,6 @@
                 <div class="social">
                     <a href="https://vk.com/kubriklub" target="_blank"><i class="vk"></i></a>
                     <a href="https://www.facebook.com/kubriklub" target="_blank"><i class="fb"></i></a>
-{#                    <a href="#" target="_blank"><i class="twit"></i></a>#}
                     <a href="https://www.instagram.com/kubrik_club/" target="_blank"><i class="inst"></i></a>
                 </div>
             </div>
@@ -39,12 +38,10 @@
         <div class="col-md-12 black_nav">
             <div class="container">
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-{#                    <a href="{% url 'about' %}">О клубе</a>#}
                     {% url 'about' as url_index %}
                     {% include 'includes/_menu_link.html' with url=url_index title='О клубе'  %}
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-{#                    <a id="irl" href="{% url 'index' %}">Концерты</a>#}
                     {% url 'index' as url_index %}
                     {% include 'includes/_menu_link.html' with url=url_index title='Концерты' id='irl'  %}
                 </div>
@@ -52,12 +49,10 @@
                     <img id="logo" src="{{ MEDIA_URL }}images/logo.png">
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-{#                    <a>Партнеры</a>#}
                     {% url 'partner' as url_index %}
                     {% include 'includes/_menu_link.html' with url=url_index title='Партнеры'  %}
                 </div>
                 <div class="menu col-md-2 col-xs-6 col-sm-2">
-{#                    <a href="{% url 'contact' %}">Контакты</a>#}
                     {% url 'contact' as url_index %}
                     {% include 'includes/_menu_link.html' with url=url_index title='Контакты'  %}
                 </div>
@@ -72,20 +67,11 @@
                         <img src="{{ MEDIA_URL }}{{ item.preview_image }}" alt="{{ item.title }}">
                         <div class="carousel-caption">
                             <span class="car_date"><o>{{ item.datetime.day }}</o> {{ item.datetime|date:"E" }}</span>
-                            <p class="car_name">{{ item.title }}</p>
+                            <p class="car_name"><a href="{% url 'event_view' item.pk %}">{{ item.title }}</a></p>
                         </div>
                     </div>
                 {% endfor %}
-{#                <div class="item active">#}
-{#                    <img src="{{ MEDIA_URL }}images/sl.png" alt="sl1">#}
-{#                    <div class="carousel-caption">#}
-{#                        <p class="car_date"><o>13</o> февpаля</p>#}
-{#                        <p class="car_name">Jayline</p>#}
-{#                    </div>#}
-{#                </div>#}
             </div>
-
-            <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -95,7 +81,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
         {% block content %}
         {% endblock %}
     </div>

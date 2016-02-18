@@ -15,7 +15,6 @@
                 <div class="social">
                     <a href="http://vk.com/share.php?url=http://kubrik.club" target="_blank"><i class="vk"></i></a>
                     <a href="http://www.facebook.com/sharer.php?u=http://kubrik.club&t={{ event.title }}" target="_blank"><i class="fb"></i></a>
-{#                    <a href="#" target="_blank"><i class="twit"></i></a>#}
 {#                    <a href="https://www.instagram.com/kubrik_club/" target="_blank"><i class="inst"></i></a>#}
                 </div>
             </div>
@@ -40,14 +39,10 @@
             {{ event.full_desc_ck|safe }}
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 comment">
-            <!-- Put this script tag to the <head> of your page -->
             <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
-
             <script type="text/javascript">
               VK.init({apiId: 5303812, onlyWidgets: true});
             </script>
-
-            <!-- Put this div tag to the place, where the Comments block will be -->
             <div id="vk_comments"></div>
             <script type="text/javascript">
             VK.Widgets.Comments("vk_comments", {limit: 10, width: "400", attach: "*"});

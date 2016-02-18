@@ -246,9 +246,17 @@ footer{
   }
   .car_name{
     font-size: 102px;
+    color: #fff;
     /*width: 100%;
     float: right;
     text-align: right;*/
+    a{
+      color: #fff;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #f05523;
+    }
   }
 }
 .carousel{
