@@ -23,12 +23,12 @@
         <div class="col-md-6 col-xs-12 col-sm-6 image pull-right">
             <img src="{{ MEDIA_URL }}{{ event.preview_image }}">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12 col-sm-6 video">
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{ event.video_link }}" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col-md-12 tickets">
+        <div class="col-md-12 col-xs-12 col-sm-12 tickets">
             <span>Вход: {{ event.ticket_price }} pуб.
                 <a href="{{ object.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
             </span>
@@ -36,7 +36,7 @@
                 <a href="{{ event.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
             </span>
         </div>
-        <div class="col-md-8 col-xs-12 col-sm-12 text">
+        <div class="col-md-12 col-xs-12 col-sm-12 text">
             {{ event.full_desc_ck|safe }}
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 comment">
@@ -50,7 +50,7 @@
             <!-- Put this div tag to the place, where the Comments block will be -->
             <div id="vk_comments"></div>
             <script type="text/javascript">
-            VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+            VK.Widgets.Comments("vk_comments", {limit: 10, width: "400", attach: "*"});
             </script>
         </div>
     </div>

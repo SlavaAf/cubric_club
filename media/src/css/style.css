@@ -366,8 +366,8 @@ footer{
   }
 }
 .event_detail{
-padding-left: 0;
-padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
   h3{
     padding-left: 15px;
     font-size: 54px;
@@ -449,6 +449,12 @@ padding-right: 0;
     }
     a{
       margin-left: 5px;
+    }
+  }
+  .comment{
+    #vk_comments{
+      max-width: 200px;
+      width: 200px;
     }
   }
 }
@@ -555,6 +561,16 @@ padding-right: 0;
   }
 }*/
 /*----------------------mobile------------------------*/
+
+@media (max-width: 399px){
+  .event_detail{
+    .comment{
+      #vk_comments{
+        display: none;
+      }
+    }
+  }
+}
 @media (max-width: 767px){
   header{
     margin-bottom: 210px;
@@ -683,6 +699,38 @@ padding-right: 0;
           }
         }
       }
+    }
+  }
+  .event_detail{
+    h3{
+      text-align: center;
+    }
+    .image{
+      margin-bottom: 15px;
+    }
+    .tickets{
+      span{
+        margin-left: auto!important;
+        /*margin-right: auto;*/
+        margin-bottom: 5px;
+        padding-left: 20px;
+        display: block;
+      }
+    }
+    .text{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .about{
+    padding-left: 10px;
+    padding-right: 10px;
+    .abo_text{
+      /*float: left!important;*/
+    }
+    .abo_img{
+      float: right!important;
     }
   }
 }
