@@ -3,15 +3,37 @@
 {% block content %}
     <div class="col-md-12 col-xs-12 col-sm-12 event_detail">
         <h3>{{ event.title }}</h3>
-        <div class="col-md-8 col-xs-12 col-sm-12 image">
+        <div class="col-md-12 col-xs-12 col-sm-12 block">
+            <div class="col-md-4 col-sm-4 col-xs-6 datetime">
+                <div class="day">{{ event.datetime.day }}</div>
+                <div class="date">
+                    <span>{{ event.datetime|date:"E" }}</span>
+                    <span>{{ event.datetime.time }}</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="social">
+                    <a href="https://vk.com/kubriklub" target="_blank"><i class="vk"></i></a>
+                    <a href="https://www.facebook.com/kubriklub" target="_blank"><i class="fb"></i></a>
+{#                    <a href="#" target="_blank"><i class="twit"></i></a>#}
+                    <a href="https://www.instagram.com/kubrik_club/" target="_blank"><i class="inst"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12 col-sm-6 image pull-right">
             <img src="{{ MEDIA_URL }}{{ event.preview_image }}">
         </div>
-
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{ event.video_link }}" allowfullscreen></iframe>
-{#                <iframe width="560" height="315" src="https://www.youtube.com/embed/DZTRbLKFNo8" frameborder="0" allowfullscreen></iframe>#}
             </div>
+        </div>
+        <div class="col-md-12 ticket">
+            <p>Вход: {{ event.ticket_price }} pуб.</p>
+            <p class="vip">VIP: {{ event.ticket_vip_price }} pуб.</p>
+        </div>
+        <div class="col-md-8 col-xs-12 col-sm-12 text">
+            {{ event.full_desc_ck|safe }}
         </div>
     </div>
 {% endblock %}
