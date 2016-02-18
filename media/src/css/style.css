@@ -435,9 +435,20 @@ padding-right: 0;
       width: 100%;
     }
   }
-  .ticket{
+  .tickets{
     border-top: 3px solid #f05523;
+    border-bottom: 3px solid #f05523;
     margin-top: 15px;
+    font-size: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    .vip{
+      margin-left: 15px;
+    }
+    a{
+      margin-left: 5px;
+    }
   }
 }
 

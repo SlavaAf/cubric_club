@@ -28,9 +28,13 @@
                 <iframe class="embed-responsive-item" src="{{ event.video_link }}" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col-md-12 ticket">
-            <p>Вход: {{ event.ticket_price }} pуб.</p>
-            <p class="vip">VIP: {{ event.ticket_vip_price }} pуб.</p>
+        <div class="col-md-12 tickets">
+            <span>Вход: {{ event.ticket_price }} pуб.
+                <a href="{{ object.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
+            </span>
+            <span class="vip">VIP: {{ event.ticket_vip_price }} pуб.
+                <a href="{{ event.ticket_link }}" target="_blank"><img class="ticket" src="{{ MEDIA_URL }}images/ticket.png"></a>
+            </span>
         </div>
         <div class="col-md-8 col-xs-12 col-sm-12 text">
             {{ event.full_desc_ck|safe }}
