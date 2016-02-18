@@ -4,6 +4,22 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
+class Contacts(models.Model):
+    description = RichTextUploadingField(verbose_name="Контакты", blank=True)
+
+    class Meta:
+        verbose_name = "Контакт"
+        verbose_name_plural = "Контакты"
+
+
+class Partners(models.Model):
+    description = RichTextUploadingField(verbose_name="Партнеры", blank=True)
+
+    class Meta:
+        verbose_name = "Партнер"
+        verbose_name_plural = "Партнеры"
+
+
 class Post(models.Model):
     ACCOUNT_TYPES = (
         (1, u'Концерт'),
