@@ -60,15 +60,15 @@
         </div>
     </header>
     <div class="container">
+    {% url 'partner' as url_slider_p %}
+    {% url 'contact' as url_slider_c %}
+    {% if url_slider_p == request.path or url_slider_c == request.path %}
+    {% else %}
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 {% for item in object_list %}
                     <div class="item">
                         <img src="{{ MEDIA_URL }}{{ item.preview_image }}" alt="{{ item.title }}">
-                        <div class="carousel-caption">
-                            <span class="car_date"><o>{{ item.datetime.day }}</o> {{ item.datetime|date:"E" }}</span>
-                            <p class="car_name"><a href="{% url 'event_view' item.pk %}">{{ item.title }}</a></p>
-                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -81,6 +81,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    {% endif %}
         {% block content %}
         {% endblock %}
     </div>
